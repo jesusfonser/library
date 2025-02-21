@@ -12,6 +12,8 @@ function Libro(title, author, pages, isRead){
 
 */
 
+const library = [];
+
 function Book(title, author, pages, isRead, summary){
     this.title = title;
     this.author = author;
@@ -19,3 +21,9 @@ function Book(title, author, pages, isRead, summary){
     this.isRead = isRead;
     this.summary = summary;
 }
+
+function addNewBook(title, author, pages, isRead, summary){
+    let book = new Book(title, author, pages, isRead, summary);
+    library.push(book);
+}
+
