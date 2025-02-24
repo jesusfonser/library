@@ -20,6 +20,38 @@
                 <th>Did you read it?</th>
             </tr>
         </table>
+        <button id="adder">Add a new book!</button>
+        <dialog>
+            <form>
+                <div>
+                    <label id="titulo">Title:</label>
+                    <input type="text" id="titulo" required>
+                    <label id="autor">Author:</label>
+                    <input type="text" id="autor" required>
+                    <label id="pags">Pages:</label>
+                    <input type="number" id="pags" required>
+                </div>
+                <div>
+                    <span>Summary:</span>
+                    <textarea></textarea>
+                    <span>Did you read it?</span>
+                    <div id="eleccion">
+                        <div>
+                            <label id="si">Yes</label>
+                            <input type="radio" id="si" name="leido">
+                        </div>
+                        <div>
+                            <label id="no">No</label>
+                            <input type="radio" id="no" name="leido">
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div id="botoncicos">
+                <button>Add</button>
+                <button>Cancel</button>
+            </div>
+        </dialog>
         <script src="script.js"></script>
     </body>
 </html>

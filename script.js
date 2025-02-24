@@ -11,9 +11,14 @@ function Libro(title, author, pages, isRead){
 }
 
 */
-
+const dialog = document.querySelector("dialog");
+const adder = document.getElementById("adder");
 const library = [];
 let table = document.getElementsByTagName("table")[0];
+
+adder.addEventListener("click", () =>{
+    dialog.showModal()
+});
 
 function Book(title, author, pages, summary, isRead){
     this.title = title;

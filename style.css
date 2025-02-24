@@ -5,7 +5,8 @@ body{
     align-items: center;
     --titlecolor: #AD8B73;
     --bgcolor: #CEAB93;
-    --bgtablecolor: #E3CAA5;
+    --bordercolor: #E3CAA5;
+    --tablebgcolor: #FFFBE9;
 }
 
 h3, h1{
@@ -16,22 +17,93 @@ h3, h1{
 }
 
 table{
-    background-color: #FFFBE9;
+    background-color: var(--tablebgcolor);
     border-collapse: collapse;
     margin-top: 20px;
 }
 
 th, td{
-    border: 1px solid var(--bgtablecolor);
+    border: 1px solid var(--bordercolor);
     width: 130px;
     padding: 15px;
     color: var(--titlecolor);
 }
 
 th{
-    background-color: var(--bgtablecolor);
+    background-color: var(--bordercolor);
 }
 
 #summ{
     width: 250px;
+}
+
+button{
+    background-color: var(--titlecolor);
+    color: var(--tablebgcolor);
+    padding: 15px;
+    border-width: 0px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+dialog{
+    background-color: pink;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    gap: 40px;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#eleccion{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#eleccion > div{
+    display: flex;
+    flex-direction: row;
+}
+
+span, label{
+    align-self: start;
+    margin-bottom: 10px;
+}
+
+::backdrop{
+    background-color: black;
+    opacity: 0.75;
+}
+
+input, textarea{
+    margin-bottom: 20px;
+}
+
+textarea{
+    width: 250px;
+    height: 100px;
+}
+
+#botoncicos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#botoncicos > button{
+    width: 150px;
 }
