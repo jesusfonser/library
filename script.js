@@ -27,3 +27,4 @@ function addNewBook(title, author, pages, isRead, summary){
     library.push(book);
 }
 
+addNewBook("Lord of the Rings", "J.R.R. Tolkien", 295, false, "A book about hobbits");

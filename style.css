@@ -1,0 +1,33 @@
+body{
+    background-color: var(--bgcolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    --titlecolor: #AD8B73;
+    --bgcolor: #CEAB93;
+    --bgtablecolor: #E3CAA5;
+}
+
+h3, h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--titlecolor);
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+table{
+    background-color: #FFFBE9;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th{
+    border: 1px solid var(--bgtablecolor);
+    width: 130px;
+    padding: 15px;
+    color: var(--titlecolor);
+}
+
+#summ{
+    width: 220px;
+}
