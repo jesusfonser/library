@@ -16,6 +16,7 @@ const adder = document.getElementById("adder");
 const library = [];
 let table = document.getElementsByTagName("table")[0];
 const buttonAdd = document.getElementById("btn-add");
+const buttonCancel = document.getElementById("btn-cancel");
 const errorDiv = document.getElementById("error");
 adder.addEventListener("click", () => {
     dialog.showModal()
@@ -45,10 +46,19 @@ buttonAdd.addEventListener("click", () => {
 
     if (enviar){
         addNewBook(titleBook.value, pagesBook.value, authorBook.value, summaryBook.value, readBook.value);
+        dialog.close();
     }
     else{
         errorDiv.setAttribute("style", "display: block");
     }
+})
+
+buttonCancel.addEventListener("click", () => {
+    dialog.close();
+})
+
+dialog.addEventListener("close", () =>{
+    errorDiv.setAttribute("style", "display: none;");
 })
 
 function Book(title, author, pages, summary, isRead){
