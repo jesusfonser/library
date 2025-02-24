@@ -15,10 +15,41 @@ const dialog = document.querySelector("dialog");
 const adder = document.getElementById("adder");
 const library = [];
 let table = document.getElementsByTagName("table")[0];
-
-adder.addEventListener("click", () =>{
+const buttonAdd = document.getElementById("btn-add");
+const errorDiv = document.getElementById("error");
+adder.addEventListener("click", () => {
     dialog.showModal()
 });
+
+buttonAdd.addEventListener("click", () => {
+    let enviar = true;
+    
+    let titleBook = document.querySelector("input#titulo");
+    let pagesBook = document.querySelector("input#pags");
+    let authorBook = document.querySelector("input#autor");
+    let summaryBook = document.querySelector("textarea");
+    let readBook = document.querySelector("input[type='radio']:checked");
+
+    if (readBook){
+        let arrayDialog = [titleBook.value, pagesBook.value, authorBook.value, summaryBook.value, readBook.value];
+        arrayDialog.forEach(item => {
+            if (!item){
+                enviar = false;
+                return;
+            }
+        })
+    }
+    else{
+        enviar = false;
+    }
+
+    if (enviar){
+        addNewBook(titleBook.value, pagesBook.value, authorBook.value, summaryBook.value, readBook.value);
+    }
+    else{
+        errorDiv.setAttribute("style", "display: block");
+    }
+})
 
 function Book(title, author, pages, summary, isRead){
     this.title = title;
@@ -44,8 +75,6 @@ function books2Page(){
         let nrow = document.createElement("tr");
         for (const key in item){
             let ntd = document.createElement("td");
-            item[key] === true ? ntd.textContent = "✓" :
-            item[key] === false ? ntd.textContent = "✕" :
             ntd.textContent = item[key];
             nrow.appendChild(ntd);
         }
@@ -54,14 +83,11 @@ function books2Page(){
     })
 }
 
-addNewBook("Lord of the Rings", "J.R.R. Tolkien", 295,"A book about hobbits", false);
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
+
+
+addNewBook("Lord of the Rings", "J.R.R. Tolkien", 295,"A book about hobbits", "✕");
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", "✓");
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", "✓");
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", "✓");
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", "✓");
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", "✓");

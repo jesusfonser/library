@@ -107,3 +107,10 @@ textarea{
 #botoncicos > button{
     width: 150px;
 }
+
+#error{
+    background-color: rgb(250, 53, 53);
+    padding: 20px;
+    margin-top: 10px;
+    display: none;
+}
