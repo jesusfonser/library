@@ -39,6 +39,8 @@ function books2Page(){
         let nrow = document.createElement("tr");
         for (const key in item){
             let ntd = document.createElement("td");
+            item[key] === true ? ntd.textContent = "✓" :
+            item[key] === false ? ntd.textContent = "✕" :
             ntd.textContent = item[key];
             nrow.appendChild(ntd);
         }
