@@ -30,6 +30,11 @@ function addNewBook(title, author, pages, summary, isRead){
 }
 
 function books2Page(){
+    let entradas = Array.from(document.getElementsByClassName("libro"));
+    for (let entrada of entradas){
+        entrada.remove();
+    }
+
     library.forEach(item =>{
         let nrow = document.createElement("tr");
         for (const key in item){
@@ -37,8 +42,19 @@ function books2Page(){
             ntd.textContent = item[key];
             nrow.appendChild(ntd);
         }
+        nrow.setAttribute("class", "libro");
         table.appendChild(nrow);
     })
 }
 
 addNewBook("Lord of the Rings", "J.R.R. Tolkien", 295,"A book about hobbits", false);
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
+addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", true);
