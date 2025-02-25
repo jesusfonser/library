@@ -26,6 +26,12 @@ function markRead(button){
     books2Page();
 }
 
+function deleteRow(button){
+    let theid = button.getAttribute("id");
+    library.splice([parseInt(theid)], 1);
+    books2Page();
+}
+
 adder.addEventListener("click", () => {
     dialog.showModal()
 });
@@ -91,7 +97,18 @@ function books2Page(){
 
     library.forEach(item =>{
         let createButton = false;
+
         let nrow = document.createElement("tr");
+
+        let deletetd = document.createElement("td");
+        deletetd.setAttribute("class", "specialdel");
+        let deletebutton = document.createElement("button");
+        deletebutton.setAttribute("id", id.toString());
+        deletebutton.setAttribute("onclick", "deleteRow(this)");
+        deletebutton.textContent = "X";
+        deletetd.appendChild(deletebutton);
+        nrow.appendChild(deletetd);
+
         for (const key in item){
             let ntd = document.createElement("td");
             ntd.textContent = item[key];
