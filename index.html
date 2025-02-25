@@ -12,12 +12,17 @@
         <!-- Para mostrar los libros usaremos una tabla. La inserción de nuevos libros empleará
          lo de <dialog> -->
         <table>
+            <colgroup>
+                <col span="5">
+                <col id="columnaRead">
+            </colgroup>
             <tr>
                 <th>Title</th>
                 <th>Author</th>
                 <th>Pages</th>
                 <th id="summ">Summary</th>
                 <th>Did you read it?</th>
+                <th class="special"></th>
             </tr>
         </table>
         <button id="adder">Add a new book!</button>

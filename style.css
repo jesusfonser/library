@@ -114,3 +114,21 @@ textarea{
     margin-top: 10px;
     display: none;
 }
+
+.special{
+    background-color: var(--bgcolor);
+    border-color: var(--bgcolor);
+    padding: 0px;
+    padding-left: 10px;
+    w
+}
+
+.special > button{
+    height: 30px;
+    width: 100px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0px;
+    padding: 0px;
+}
