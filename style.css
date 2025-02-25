@@ -120,7 +120,7 @@ textarea{
     border-color: var(--bgcolor);
     padding: 0px;
     padding-left: 10px;
-    w
+    
 }
 
 .special > button{
@@ -131,4 +131,8 @@ textarea{
     font-size: 1rem;
     margin: 0px;
     padding: 0px;
+}
+
+.center{
+    text-align: center;
 }

@@ -95,7 +95,11 @@ function books2Page(){
         for (const key in item){
             let ntd = document.createElement("td");
             ntd.textContent = item[key];
+
+            if(key === "pages" || key === "isRead") ntd.setAttribute("class", "center");
+
             nrow.appendChild(ntd);
+            
             if(item[key] === "✕"){
                 createButton = true;
             }
