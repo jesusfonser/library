@@ -48,8 +48,27 @@ button{
 }
 
 dialog{
-    background-color: pink;
+    background-color: var(--tablebgcolor);
+    color: var(--titlecolor);
+    border: 0px;
 }
+
+dialog input{
+    background-color: var(--tablebgcolor);
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--titlecolor);
+}
+
+dialog input:focus{
+    background-color: var(--tablebgcolor);
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--titlecolor);
+    outline: 0px;
+}
+
+
 
 button:hover{
     cursor: pointer;
@@ -113,6 +132,7 @@ textarea{
     padding: 20px;
     margin-top: 10px;
     display: none;
+    color: black;
 }
 
 .special{
