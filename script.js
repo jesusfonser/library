@@ -126,8 +126,4 @@ function books2Page(){
 
 
 addNewBook("Lord of the Rings", "J.R.R. Tolkien", 295,"A book about hobbits", "✕");
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", "✓");
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", "✕");
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", "✓");
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", "✕");
-addNewBook("Jarry el petas", "Mi prima", 69, "Un libro sobre tu prima", "✓");
+addNewBook("Lorem Ipsum Book", "Mr. Lorem", 420, "A book about Lorem and Ipsum", "✓");
