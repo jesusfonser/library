@@ -75,12 +75,14 @@ dialog.addEventListener("close", () =>{
     errorDiv.setAttribute("style", "display: none;");
 })
 
-function Book(title, author, pages, summary, isRead){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.summary = summary;
-    this.isRead = isRead;
+class Book{
+    constructor(title, author, pages, summary, isRead){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this. summary = summary;
+        this.isRead = isRead;
+    }
 }
 
 function addNewBook(title, author, pages, summary, isRead){
